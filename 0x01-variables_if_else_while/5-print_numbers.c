@@ -1,5 +1,3 @@
-5-print_numbers.c
-
 #include <stdio.h>
 
 /**
@@ -15,7 +13,6 @@ int main(void)
 	{
 		printf("%d", i);
 	}
-	printf('\n');
+printf('\n');
 	return (0);
 }
-
