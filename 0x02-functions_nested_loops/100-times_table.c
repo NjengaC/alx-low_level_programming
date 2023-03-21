@@ -1,42 +1,39 @@
-include "main.h"
+#include <stdio.h>
 /**
-* print_times_table - Prints the n times table
-* @n: number times table (0 < n <= 15)
-* Return: no return
+* main - fibonacci <3
+* Purpose - no hardcode
+* Return:  (Success)
 */
-void print_times_table(int n)
+int main(void)
 {
-int a, b, op;
-#if (n >= 0 && n <= 15)
+unsigned long int i;
+unsigned long int bef = 1;
+unsigned long int aft = 2;
+unsigned long int l = 1000000000;
+unsigned long int bef1;
+unsigned long int bef2;
+unsigned long int aft1;
+unsigned long int aft2;
+printf("%lu", bef);
+for (i = 1; i < 91; i++)
 {
-for (a = 0; a <= n; a++)
-{
-_putchar(48);
-for (b = 1; b <= n; b++)
-{
-op = a * b;
-_putchar(44);
-_putchar(32);
-if (op <= 9)
-{
-_putchar(32);
-_putchar(32);
-_putchar(op + 48);
+printf(", %lu", aft);
+aft += bef;
+bef = aft - bef;
 }
-else if (op <= 99)
+bef1 = (bef / l);
+bef2 = (bef % l);
+aft1 = (aft / l);
+aft2 = (aft % l);
+for (i = 92; i < 99; ++i)
 {
-_putchar(32);
-_putchar((op / 10) + 48);
-_putchar((op % 10) + 48);
+printf(", %lu", aft1 + (aft2 / l));
+printf("%lu", aft2 % l);
+aft1 = aft1 + bef1;
+bef1 = aft1 - bef1;
+aft2 = aft2 + bef2;
+bef2 = aft2 - bef2;
 }
-else
-{
-_putchar(((op / 100) % 10) + 48);
-_putchar(((op / 10) % 10) + 48);
-_putchar((op % 10) + 48);
-}
-}
-_putchar('\n');
-}
-}
+printf("\n");
+return (0);
 }
