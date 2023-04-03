@@ -1,5 +1,5 @@
 #include "main.h"
-/**_memset -fill a block of memory with a specific value @s: sttarting address of memory to be filled
+/**_memset -fill a block of memory with a specific value
  * @s is the starting address of mem to be filled.
  * @b is the desired value.
  * @n is the number of bytes to be changed.
