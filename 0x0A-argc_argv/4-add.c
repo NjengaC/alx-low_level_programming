@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+/**
+ * main - prints sum o positive numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 Success, 1 Error
+ */
 
 int main(int argc, char *argv[])
 {
