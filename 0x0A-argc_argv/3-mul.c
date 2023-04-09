@@ -3,25 +3,17 @@
 #include <stdlib.h>
 /**
  * main - prints the product of two in puts from sdandart input
- * @i: first argument
- * @j: second argument
- * @res: result of product
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: 0 (Success) else 1 (Error)
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int i, j, res;
-
-if (argc <= 2 || argc > 3)
-{
-	printf("Error\n");
-	return (1);
-}
-else
-i = atoi(argv[1]);
-j = atoi(argv[2]);
-res = i * j;
-printf("%d\n", res);
-return (0);
+	if (argc <= 2 || argc > 3)
+	{		printf("Error\n");
+		return (1);
+	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	return (0);
 }
