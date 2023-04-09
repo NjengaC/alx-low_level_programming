@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	int money;
 	int coins[] = { 25, 10, 5, 2, 1 };
 	int j = 0;
-	int i;
+	int i = 0;
 
 	if (argc != 2)
 	{
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	}
 	money = atoi(argv[1]);
 
-	for (i = 0; i < 5; i++)
+	for (; i < 5; i++)
 	{
 		while (money >= coins[i])
 		{
