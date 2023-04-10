@@ -30,6 +30,6 @@ return (1);
 sum += atoi(arg);
 }
 
-printf("%d\n", (argc > 1) ? sum : 0);
+printf("%d\n", sum);
 return (0);
 }
