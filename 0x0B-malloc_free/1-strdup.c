@@ -25,5 +25,6 @@ if (dupl == NULL)
 	return (NULL);
 for (; str[j]; j++)
 	dupl[j] = str[j];
+free (dupl);
 return (dupl);
 }
