@@ -8,23 +8,26 @@
  *
  * Return: pointer to a new string or NULL if str is NULL
  */
+
 char *_strdup(char *str)
 {
-char *dupl;
-int i = 0;
-int j = 0;
+	char *dupl;
+	int i = 0;
+	int j = 0;
 
-if (str == NULL)
-	return (NULL);
+	if (str == NULL)
+		return (NULL);
 
-while (str[i] != '\0')
-	i++;
-dupl = malloc(sizeof(char) * (i + 1));
+	while (str[i] != '\0')
+		i++;
 
-if (dupl == NULL)
-	return (NULL);
-for (; str[j]; j++)
-	dupl[j] = str[j];
-free(dupl);
-return (dupl);
+	dupl = malloc(sizeof(char) * (i + 1));
+
+	if (dupl == NULL)
+		return (NULL);
+
+	for (; str[j]; j++)
+		dupl[j] = str[j];
+
+	return (dupl);
 }
