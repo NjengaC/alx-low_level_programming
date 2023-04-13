@@ -27,6 +27,6 @@ int *array_range(int min, int max)
 		ray[i] = min;
 		min++;
 	}
-	free (ray);
+	free(ray);
 	return (ray);
 }
