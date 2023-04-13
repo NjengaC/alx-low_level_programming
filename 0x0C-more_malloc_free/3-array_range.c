@@ -7,6 +7,7 @@
  *
  * Return: pointer to the newly created array
  */
+
 int *array_range(int min, int max)
 {
 	int i;
@@ -22,11 +23,10 @@ int *array_range(int min, int max)
 	if (ray == NULL)
 		return (NULL);
 
-	for (i = 0; i <= max; i++)
+	for (i = 0; min <= max; i++)
 	{
 		ray[i] = min;
 		min++;
 	}
-	free(ray);
 	return (ray);
 }
