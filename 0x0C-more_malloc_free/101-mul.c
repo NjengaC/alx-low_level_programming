@@ -5,10 +5,10 @@
 #define ERR_MSG "Error"
 
 /**
- * is_digit - checks if a string contains a non-digit char
- * @s: string to be evaluated
+ * is_digit - checks if a string contains digits only
+ * @s: string to check
  *
- * Return: 0 if a non-digit is found, 1 otherwise
+ * Return: 0 if there is a not digit else 1
  */
 int is_digit(char *s)
 {
@@ -22,10 +22,9 @@ int is_digit(char *s)
 	}
 	return (1);
 }
-
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
+ * _strlen - evaluates string length
+ * @s: string for which length is checked
  *
  * Return: the length of the string
  */
@@ -39,7 +38,6 @@ int _strlen(char *s)
 	}
 	return (i);
 }
-
 /**
  * errors - handles errors for main
  */
@@ -76,7 +74,7 @@ int main(int argc, char *argv[])
 	{
 		m = s1[x] - '0';
 		k = 0;
-		for (y = _strlen(s2) - 1; y >= 0; y--)
+		for (y = y - 1; y >= 0; y--)
 		{
 			n = s2[y] - '0';
 			k += r[x + y + 1] + (m * n);
