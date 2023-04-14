@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 	{
 		m = s1[x] - '0';
 		k = 0;
-		for (y = y - 1; y >= 0; y--)
+		for (y = _strlen(s2) - 1; y >= 0; y--)
 		{
 			n = s2[y] - '0';
 			k += r[x + y + 1] + (m * n);
