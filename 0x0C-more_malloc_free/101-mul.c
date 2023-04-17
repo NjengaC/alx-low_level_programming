@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define ERR_MSG "Error"
 
 /**
  * is_digit - checks if a string contains digits only
