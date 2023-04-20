@@ -1,52 +1,52 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+
 /**
- * print_all - prints anything passed as extra argument
- * @format: list of types of arguments passed to the function
+ *  print_all - prints anything passed as extra argument
+ *   @format: list of types of arguments passed to the function
  *
- * Return: (0) always (Success)
+ *   Return: (0) always (Success)
  */
 void print_all(const char * const format, ...)
 {
-	const char * const format_copy = format;
-	const char *specifier = format_copy;
-	char *str = NULL;
-	va_list tags;
+	int i = 0;
+	char *str, *separator = "";
 
-	double flot = 0.0;
-	char character = '\0';
-	int integer = 0;
+	va_list tags;
 
 	va_start(tags, format);
 
-	while (*specifier != '\0')
+	if (format)
 	{
-		if (*specifier == 'c')
+		while (format[i])
 		{
-			character = va_arg(tags, int);
-			printf("%c, ", character);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", separator, va_arg(tags, int));
+					break;
+				case 'i':
+					printf("%s%d", separator, va_arg(tags, int));
+					break;
+				case 'f':
+					printf("%s%f", separator, va_arg(tags, double));
+					break;
+				case 's':
+					str = va_arg(tags, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", separator, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			separator = ", ";
+			i++;
 		}
-		else if (*specifier == 'i')
-		{
-			integer = va_arg(tags, int);
-			printf("%d, ", integer);
-		}
-		else if (*specifier == 'f')
-		{
-			flot = va_arg(tags, double);
-			printf("%f, ", flot);
-		}
-		else if (*specifier == 's')
-		{
-			str = va_arg(tags, char*);
-			if (str == NULL)
-				str = "(nil)";
-
-			printf("%s", str);
-		}
-		specifier++;
 	}
-		va_end(tags);
-		printf("\n");
+
+	printf("\n");
+	va_end(tags);
 }
