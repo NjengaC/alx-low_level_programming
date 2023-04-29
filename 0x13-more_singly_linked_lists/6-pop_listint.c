@@ -1,22 +1,23 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a linked list
- * @head: pointer to the listint_t list to be freed
+ * pop_listint - function
+ * @head: pointer
+ *
+ * Return: int
  */
-void free_listint2(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *temp;
+	int num;
 
-	if (head == NULL)
-		return;
+	if (!head || !*head)
+		return (0);
 
-	while (*head)
-	{
-		temp = (*head)->next;
-		free(*head);
-		*head = temp;
-	}
+	num = (*head)->n;
+	temp = (*head)->next;
+	free(*head);
+	*head = temp;
 
-	*head = NULL;
+	return (num);
 }
