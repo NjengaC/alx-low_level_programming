@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * listint_len - function
+ * listint_len - function returning no.of nodes
  * @h: list
  *
- * Return: n0des
+ * Return: no. of nodes
  */
 size_t listint_len(const listint_t *h)
 {
