@@ -44,13 +44,15 @@ int coin_count(int cents)
  */
 int main(int argc, char **argv)
 {
-	int cent;
+	int cents;
 
 	if (argc - 1 != 1)
 	{
 		printf("Error\n");
 	}
-	cent = atoi(argv[1]);
-	printf("%d\n", coin_count(cent));
+
+	cents = atoi(argv[1]);
+
+	printf("%d\n", coin_count(cents));
 	return (0);
 }
