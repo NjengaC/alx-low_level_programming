@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 {
 	int cent;
 
-	if (argc - 1 != 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
