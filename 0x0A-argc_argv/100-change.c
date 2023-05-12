@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 /**
  * coin_count - prints the minimum number of coins to make change
  * @cents: The change to be gotten free
