@@ -55,12 +55,13 @@ int main(int argc, char **argv)
 
 	cent = atoi(argv[1]);
 
-	/*if (cent <= 0)
-	{
-		printf("0\n");
-		return (1);
-	}
-*/
+	/**
+	*if (cent <= 0)
+	*{
+	*	printf("0\n");
+	*	return (1);
+	*}
+	*/
 	printf("%d\n", coin_count(cent) - 1);
 	return (0);
 }
