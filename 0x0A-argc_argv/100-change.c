@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
-int coin_count(int cents);
 /**
  * main - prints the minimum number of coins to make change
  * for an amount of money.
@@ -10,59 +8,29 @@ int coin_count(int cents);
  *
  * Return: 0 Success else 1 if no input
  */
+
 int main(int argc, char **argv)
 {
-	int cent;
+	int money;
+	int coins[] = { 25, 10, 5, 2, 1 };
+	int j = 0;
+	int i = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	money = atoi(argv[1]);
 
-	cent = atoi(argv[1]);
-
-	/**
-	*if (cent <= 0)
-	*{
-	*	printf("0\n");
-	*	return (1);
-	*}
-	*/
-	printf("%d\n", coin_count(cent) - 1);
+	for (; i < 5; i++)
+	{
+		while (money >= coins[i])
+		{
+			money -= coins[i];
+			j++;
+		}
+	}
+	printf("%d\n", j);
 	return (0);
-}
-/**
- * coin_count - prints the minimum number of coins to make change
- * @cents: The change to be gotten free
- *
- * Return: The number of changes needed
- */
-int coin_count(int cents)
-{
-        if (cents <= 0)
-        {
-                return (1);
-        }
-
-        if (cents >= 25)
-        {
-                return (1 + coin_count(cents - 25));
-        }
-        else if (cents >= 10)
-        {
-                return (1 + coin_count(cents - 10));
-
-        }
-        else if (cents >= 5)
-        {
-                return (1 + coin_count(cents - 5));
-        }
-        else if (cents >= 2)
-        {
-                return (1 + coin_count(cents - 2));
-        }
-        return (1 + coin_count(cents - 1));
-
-return (0);
 }
