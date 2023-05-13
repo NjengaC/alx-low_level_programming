@@ -11,7 +11,7 @@ int coin_count(int cents)
 {
 	if (cents <= 0)
 	{
-		return (0);
+		return (1);
 	}
 
 	if (cents >= 25)
@@ -32,6 +32,8 @@ int coin_count(int cents)
 		return (1 + coin_count(cents - 2));
 	}
 	return (1 + coin_count(cents - 1));
+
+return (0);
 }
 /**
  * main - prints the minimum number of coins to make change
@@ -53,12 +55,12 @@ int main(int argc, char **argv)
 
 	cent = atoi(argv[1]);
 
-	if (cent <= 0)
+	/*if (cent <= 0)
 	{
 		printf("0\n");
 		return (1);
 	}
-
-	printf("%d\n", coin_count(cent));
+*/
+	printf("%d\n", coin_count(cent) - 1);
 	return (0);
 }
