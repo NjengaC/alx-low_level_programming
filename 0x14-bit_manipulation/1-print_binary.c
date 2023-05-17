@@ -12,10 +12,7 @@ int cbd(int decimal)
 	int coun;
 
 	if (decimal == 0)
-	{
-		return (1);
-	}
-	coun = 0;
+		coun = 0;
 
 	while (decimal > 0)
 	{
