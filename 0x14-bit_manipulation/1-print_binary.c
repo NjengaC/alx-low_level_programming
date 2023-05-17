@@ -1,39 +1,15 @@
 #include "main.h"
 
 /**
- * cbd - counts the number of binary digits that can represent a decimal no
- * @decimal: the decimal number
- *
- * Return: number of binary digits
+ * print_binary - prints binary equivalent of a decimal number
+ * @n: number to print in binary
  */
-
-int cbd(int decimal)
-{
-	int coun;
-
-	if (decimal == 0)
-		coun = 0;
-
-	while (decimal > 0)
-	{
-		decimal >>= 1;
-		coun++;
-	}
-
-	return (coun);
-}
-
-/**
-* print_binary - prints binary equivalent of a decimal number
-* @n: number to print in binary
-*/
 void print_binary(unsigned long int n)
 {
-	int i = cbd(n);
-	int count = 0;
+	int i, count = 0;
 	unsigned long int current;
 
-	for (; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 		current = n >> i;
 
