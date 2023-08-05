@@ -16,7 +16,7 @@ int is_prime_number(int n)
 
 
 /**
- * real_prime_number - computers recursively if n is a prime number
+ * real_prime_number - computes recursively if n is a prime number
  * @n: is the number we are checking
  * @x: is the iterator
  *
