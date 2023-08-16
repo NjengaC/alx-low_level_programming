@@ -6,7 +6,7 @@
 /**
 * get_op_func - selects the correct function to perform an operation
 * @s: string containing operands
-* 
+*
 * Return: int
 */
 int (*get_op_func(char *s))(int, int)
