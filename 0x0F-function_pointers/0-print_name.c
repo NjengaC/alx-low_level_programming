@@ -2,6 +2,7 @@
 /**
  * print_name - calls a function that prints out to stdout
  * @name: string to print
+ * @f: pointer to a funtion
  *
  * Return: nothing
  */
