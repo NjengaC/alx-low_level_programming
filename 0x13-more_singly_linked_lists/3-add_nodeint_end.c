@@ -5,7 +5,7 @@
  * @head: pointer to the first node
  * @n: int member to add.
  *
- * Return: address of the node where the loop starts or NULL if there is no loop
+ * Return: address of node where loop starts or NULL if there is no loop
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
