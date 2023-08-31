@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * convert_binary - prints the binary representation of a number.
+ * print_binary - prints the binary representation of a number.
  * @n: number to print in binary
- * Return: a string of binary characters
+ * Return: nothing
  */
 void print_binary(unsigned long int n)
 {
@@ -30,5 +30,4 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		count++;
 	}
-	_putchar('\0');
 }
