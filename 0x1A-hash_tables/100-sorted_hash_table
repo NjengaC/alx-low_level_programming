@@ -1,4 +1,4 @@
-#include "shash_tables.h"
+#include "hash_tables.h"
 
 /**
  * shash_table_create - creates a shash table with a given size
@@ -121,7 +121,7 @@ void add_i_shash(shash_table_t *ht, shash_node_t *new)
 }
 
 /**
- * shash_table_set - adds a shash (key, value) to a given shash table
+ * shash_table_set - adds a hash (key, value) to a given shash table
  *
  * @ht: pointer to the shash table
  * @key: key of the shash
