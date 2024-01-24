@@ -2,6 +2,8 @@
 """
 Perimeter finder
 """
+
+
 def island_perimeter(grid):
     """
     returns the perimeter of the island described in grid:
@@ -25,7 +27,7 @@ def island_perimeter(grid):
                     count = count + 1
                 if j == 0 and grid[i][j] == 1:
                     count = count + 1
-            
+
             j = j + 1
         j = 0
         i = i + 1
