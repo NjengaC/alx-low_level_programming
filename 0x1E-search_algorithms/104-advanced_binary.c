@@ -23,17 +23,12 @@ int recursive_binary_search(int *array, size_t L, size_t R, int value)
 			printf(", ");
 	}
 	printf("\n");
-	if (array[mid] == value)
-	{
-		if (mid == L || array[mid - 1] != value)
-			return (mid);
-		else
-			return (recursive_binary_search(array, L, mid, value));
-	}
-	else if (array[mid] < value)
-		return (recursive_binary_search(array, mid + 1, R, value));
-	else
-		return (recursive_binary_search(array, L, mid - 1, value));
+	if (array[mid] == value && (mid == L || array[mid - 1] != value))
+		return (mid);
+
+	else if (array[mid] >= value)
+		return (recursive_binary_search(array, L, mid, value));
+	return (recursive_binary_search(array, mid + 1, R, value));
 }
 /**
  * advanced_binary - searches for a given value in a sorted array of integers
